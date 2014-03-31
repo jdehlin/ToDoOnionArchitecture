@@ -1,6 +1,8 @@
-﻿namespace ToDoApp.Application.DataInterfaces
+﻿using ToDoApp.Application.DataTransferModels;
+
+namespace ToDoApp.Application.DataInterfaces
 {
-    public interface IToDoListRepository
+    public interface IToDoListRepository : IRepository<ToDoList>
     {
          
     }

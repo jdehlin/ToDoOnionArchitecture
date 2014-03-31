@@ -1,6 +1,6 @@
-﻿namespace ToDoApp.Application.Services
+﻿namespace ToDoApp.Application.Services.Implementations
 {
-    public class ToDoItemService
+    public class ToDoItemService : IToDoItemService
     {
          
     }

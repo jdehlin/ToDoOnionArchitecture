@@ -1,7 +1,39 @@
-﻿namespace ToDoApp.Domain.Models
+﻿using System;
+using System.Collections.Generic;
+
+namespace ToDoApp.Domain.Models
 {
-    public class ToDoList
+    public sealed class ToDoList : BaseModel
     {
-         
+        public ToDoList(int id, int userId, string title)
+        {
+            Id = id;
+            UserId = userId;
+            Title = title;
+
+            CreatedAt = DateTime.Now;
+        }
+
+
+        public int UserId { get; private set; }
+
+        public string Title { get; private set; }
+        
+        public List<ToDoItem> ToDoItems { get; set; }
+
+        public override bool IsValid
+        {
+            get
+            {
+                var userIdSet = UserId > 0;
+                var validBody = Title.Length > 3 && Title.Length <= 100;
+                return userIdSet && validBody;
+            }
+        }
+
+        public override bool CanModify(User user)
+        {
+            return IsValid && Id == user.Id;
+        }
     }
 }

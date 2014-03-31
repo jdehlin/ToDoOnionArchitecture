@@ -35,6 +35,9 @@
     <Reference Include="Dapper">
       <HintPath>..\packages\Dapper.1.13\lib\net45\Dapper.dll</HintPath>
     </Reference>
+    <Reference Include="MiniProfiler">
+      <HintPath>..\packages\MiniProfiler.2.1.0\lib\net40\MiniProfiler.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -44,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataInterfaces\IRepository.cs" />
     <Compile Include="DataInterfaces\IToDoItemRepository.cs" />
     <Compile Include="DataInterfaces\IToDoListRepository.cs" />
     <Compile Include="DataInterfaces\IUserRepository.cs" />
