@@ -12,7 +12,7 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ToDoApp.Application.Models.Database
+namespace ToDoApp.Application.DataTransferModels
 {
     /// <summary>
     /// A class which represents the ToDoItems table.

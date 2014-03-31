@@ -31,8 +31,8 @@ It is based on the T4 template from the PetaPoco project which in turn is based 
 */
 	// Settings
     ConnectionStringName = ""; // Uses last connection string in config if not specified
-	ConfigPath = @"..\..\..\ToDoApp.Website\Web.config"; //Looks in current project for web.config or app.config by default. This overrides to a relative path - useful for seperate class library projects.
-    Namespace = "ToDoApp.Application.Models.Database";
+	ConfigPath = @""; //Looks in current project for web.config or app.config by default. This overrides to a relative path - useful for seperate class library projects.
+    Namespace = "ToDoApp.Application.DataTransferModels";
 	ClassPrefix = "";
 	ClassSuffix = "";
     IncludeViews = true;

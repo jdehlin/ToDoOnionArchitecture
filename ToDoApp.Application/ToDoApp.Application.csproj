@@ -47,7 +47,7 @@
     <Compile Include="DataInterfaces\IToDoItemRepository.cs" />
     <Compile Include="DataInterfaces\IToDoListRepository.cs" />
     <Compile Include="DataInterfaces\IUserRepository.cs" />
-    <Compile Include="Models\Database\ModelGenerator.cs">
+    <Compile Include="DataTransferModels\ModelGenerator.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelGenerator.tt</DependentUpon>
@@ -66,7 +66,8 @@
     <Compile Include="Services\IUserService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Models\Database\ModelGenerator.tt">
+    <None Include="App.config" />
+    <None Include="DataTransferModels\ModelGenerator.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ModelGenerator.cs</LastGenOutput>
     </None>
