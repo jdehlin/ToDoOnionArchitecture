@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "ToDo App";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script type="text/javascript">
+
+    var baseUrl = '@Request.Url.GetLeftPart(UriPartial.Authority)' + '/Api/';
+
+</script>
+
+<div class="view-container">
+    <div ng-view class="view-frame"></div>
+</div>
