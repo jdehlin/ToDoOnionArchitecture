@@ -5,14 +5,14 @@
 // 
 //     Connection String Name: `ConnectionString`
 //     Provider:               `System.Data.SqlServerCe.4.0`
-//     Connection String:      `Data Source=C:\Users\jmdehlin\Projects\ToDoOnionArchitecture\ToDoApp.Website\App_Data\\ToDoDatabase.sdf`
+//     Connection String:      `Data Source=~\..\ToDoApp.Website\App_Data\ToDoDatabase.sdf`
 //     Include Views:          `True`
 
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ToDoApp.Application.DataTransferModels
+namespace ToDoApp.Domain.DataTransfer
 {
     /// <summary>
     /// A class which represents the ToDoItems table.
@@ -51,6 +51,7 @@ namespace ToDoApp.Application.DataTransferModels
 		[Key]
 		public virtual int Id { get; set; }
 		public virtual string Name { get; set; }
+		public virtual DateTime CreatedAt { get; set; }
 	}
 
 }

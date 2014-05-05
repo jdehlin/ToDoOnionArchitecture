@@ -62,11 +62,14 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\ToDoApp.Application\ToDoApp.Application.csproj">
       <Project>{5d9f9b07-3659-42f8-ba59-0c22fd76a78d}</Project>
       <Name>ToDoApp.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ToDoApp.Domain\ToDoApp.Domain.csproj">
+      <Project>{27b3af08-a221-4a3a-a7da-2302f75ba7be}</Project>
+      <Name>ToDoApp.Domain</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
