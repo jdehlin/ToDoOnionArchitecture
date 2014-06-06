@@ -1,6 +1,7 @@
 ﻿using System;
+using ToDoApp.Domain.Models;
 
-namespace ToDoApp.Domain.Models
+namespace ToDoApp.Domain
 {
     public abstract class BaseModel
     {

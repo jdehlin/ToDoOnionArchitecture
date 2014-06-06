@@ -16,14 +16,12 @@ namespace ToDoApp.Application.Services.Implementations
         }
 
 
-        public List<User> Get()
+        public List<User> GetAll()
         {
-            var result = _userRepository.GetList();
-            var mappedResult = Mapper.Map<List<Domain.DataTransfer.User>, List<User>>(result.ToList());
-            return mappedResult;
+            return _userRepository.GetList();
         }
 
-        public User Get(int userId)
+        public User GetWithLists(int userId)
         {
             var result = _userRepository.Get(userId);
             var mappedResult = Mapper.Map<Domain.DataTransfer.User, User>(result);

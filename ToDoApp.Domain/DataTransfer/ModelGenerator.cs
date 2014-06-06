@@ -18,7 +18,7 @@ namespace ToDoApp.Domain.DataTransfer
     /// A class which represents the ToDoItems table.
     /// </summary>
 	[Table("ToDoItems")]
-	public class ToDoItem : Models.BaseModel
+	public class ToDoItem : BaseModel
 	{
 		[Key]
 		public virtual int Id { get; set; }
@@ -33,7 +33,7 @@ namespace ToDoApp.Domain.DataTransfer
     /// A class which represents the ToDoLists table.
     /// </summary>
 	[Table("ToDoLists")]
-	public class ToDoList : Models.BaseModel
+	public class ToDoList : BaseModel
 	{
 		[Key]
 		public virtual int Id { get; set; }
@@ -46,7 +46,7 @@ namespace ToDoApp.Domain.DataTransfer
     /// A class which represents the Users table.
     /// </summary>
 	[Table("Users")]
-	public class User : Models.BaseModel
+	public class User : BaseModel
 	{
 		[Key]
 		public virtual int Id { get; set; }

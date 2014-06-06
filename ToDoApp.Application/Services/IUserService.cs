@@ -5,7 +5,7 @@ namespace ToDoApp.Application.Services
 {
     public interface IUserService
     {
-        List<User> Get();
-        User Get(int userId);
+        List<User> GetAll();
+        User GetWithLists(int userId);
     }
 }

@@ -51,20 +51,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseModel.cs" />
     <Compile Include="DataTransfer\ModelGenerator.cs">
       <DependentUpon>ModelGenerator.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="Mappings.cs" />
-    <Compile Include="Models\BaseModel.cs" />
     <Compile Include="Models\ToDoItem.cs" />
     <Compile Include="Models\ToDoList.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
     <None Include="DataTransfer\ModelGenerator.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
     </None>

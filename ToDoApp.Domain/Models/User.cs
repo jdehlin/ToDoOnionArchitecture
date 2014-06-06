@@ -1,7 +1,14 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace ToDoApp.Domain.Models
 {
+    [Flags]
+    public enum UserDependencies
+    {
+        ToDoLists = 1
+    }
+
     public sealed class User : DataTransfer.User
     {
         public User(int id, string name)
