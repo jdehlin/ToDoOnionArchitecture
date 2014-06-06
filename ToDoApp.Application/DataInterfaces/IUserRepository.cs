@@ -1,6 +1,9 @@
-﻿namespace ToDoApp.Application.DataInterfaces
+﻿using System.Collections.Generic;
+using ToDoApp.Domain.DataTransfer;
+
+namespace ToDoApp.Application.DataInterfaces
 {
-    public interface IUserRepository
+    public interface IUserRepository : IRepository<User>
     {
 
     }

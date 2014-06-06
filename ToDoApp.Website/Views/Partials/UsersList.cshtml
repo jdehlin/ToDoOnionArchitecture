@@ -1,19 +1,10 @@
 ﻿<div class="container-fluid">
     <div class="row-fluid">
         
-        <div class="span2">
-            <!--Sidebar content-->
-            Search: <input ng-model="query">
-            Sort by:
-            <select ng-model="orderProp">
-                <option value="name">Alphabetical</option>
-            </select>
-        </div>
-
         <div class="span10">
             <!--Body content-->
             <ul class="users">
-                <li ng-repeat="user in users | filter:query | orderBy:orderProp"
+                <li ng-repeat="user in users"
                     class="thumbnail user-listing">
                     <a href="#/users/{{user.Id}}">{{user.Name}}</a>
                 </li>

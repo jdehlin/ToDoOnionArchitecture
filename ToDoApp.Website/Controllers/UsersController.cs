@@ -1,17 +1,26 @@
 ﻿using System.Collections.Generic;
 using System.Web.Http;
+using ToDoApp.Application.Services;
 using ToDoApp.Domain.Models;
 
 namespace ToDoApp.Website.Controllers
 {
     public class UsersController : ApiController
     {
+        private readonly IUserService _userService;
+
+        public UsersController(IUserService userService)
+        {
+            _userService = userService;
+        }
+
+
         /// <summary>
         /// Get a list of all of the users.
         /// </summary>
         public List<User> Get()
         {
-            return new List<User> { new User(1, "John Jones") };
+            return _userService.Get();
         }
 
         /// <summary>
@@ -19,7 +28,7 @@ namespace ToDoApp.Website.Controllers
         /// </summary>
         public User Get(int id)
         {
-            return new User(1, "John Jones") { ToDoLists = new List<ToDoList> { new ToDoList(1, 1, "Things To Do") } };
+            return _userService.Get(id);
         }
     }
 }

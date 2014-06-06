@@ -45,6 +45,12 @@
     <Reference Include="MiniProfiler">
       <HintPath>..\packages\MiniProfiler.2.1.0\lib\net40\MiniProfiler.dll</HintPath>
     </Reference>
+    <Reference Include="StructureMap">
+      <HintPath>..\packages\structuremap.3.0.3.116\lib\net40\StructureMap.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap.Net4">
+      <HintPath>..\packages\structuremap.3.0.3.116\lib\net40\StructureMap.Net4.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
@@ -132,15 +138,18 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\PartialsController.cs" />
+    <Compile Include="Controllers\ListsController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="DependencyResolution\ApiStuff.cs" />
+    <Compile Include="DependencyResolution\ResolutionConfiguration.cs" />
+    <Compile Include="DependencyResolution\StructureMapControllerFactory.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\ToDoDatabase.sdf" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -505,8 +514,10 @@
     <Content Include="Scripts\version.json" />
     <Content Include="Views\Partials\UsersList.cshtml" />
     <Content Include="Views\Partials\ToDoLists.cshtml" />
+    <Content Include="Views\Partials\ToDoList.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\" />
     <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
@@ -516,6 +527,10 @@
     <ProjectReference Include="..\ToDoApp.Application\ToDoApp.Application.csproj">
       <Project>{5d9f9b07-3659-42f8-ba59-0c22fd76a78d}</Project>
       <Name>ToDoApp.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ToDoApp.Data\ToDoApp.Data.csproj">
+      <Project>{00f475f7-e23d-47ea-8c4b-ff7083ce7fc6}</Project>
+      <Name>ToDoApp.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\ToDoApp.Domain\ToDoApp.Domain.csproj">
       <Project>{27b3af08-a221-4a3a-a7da-2302f75ba7be}</Project>

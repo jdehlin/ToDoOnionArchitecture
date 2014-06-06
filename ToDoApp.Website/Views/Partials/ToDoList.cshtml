@@ -4,9 +4,9 @@
         <div class="span10">
             <!--Body content-->
             <ul class="lists">
-                <li ng-repeat="list in user.ToDoLists"
-                    class="thumbnail list-listing">
-                    <a href="#/lists/{{list.Id}}">{{list.Title}}</a>
+                <li ng-repeat="item in list.ToDoItems"
+                    class="thumbnail item-listing">
+                    <span>{{item.Body}}</span>
                 </li>
             </ul>
         </div>

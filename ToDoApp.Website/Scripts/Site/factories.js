@@ -22,3 +22,16 @@ toDoApp.factory('Users', function ($http, $q) {
         }
     }
 });
+
+toDoApp.factory('Lists', function ($http, $q) {
+    return {
+        GetList: function (listId) {
+            var deferred = $q.defer();
+            $http.get('/Api/Lists/' + listId + '?json=true')
+                .success(function (data, status, headers, config) {
+                    deferred.resolve(data);
+                });
+            return deferred.promise;
+        }
+    }
+});

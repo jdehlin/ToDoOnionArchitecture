@@ -9,7 +9,7 @@
             controller: 'ToDoListsController'
         })
         .when('/lists/:listId', {
-            templateUrl: 'views/partials/todo-list.html',
+            templateUrl: 'Partials/ToDoList',
             controller: 'ToDoListDetailsController'
         })
         .otherwise({

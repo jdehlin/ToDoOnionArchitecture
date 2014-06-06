@@ -6,7 +6,7 @@ namespace ToDoApp.Application.DataInterfaces
     {
         T Get(int id);
 
-        IList<T> GetList();
+        IEnumerable<T> GetList();
 
         int Insert(T entity);
 

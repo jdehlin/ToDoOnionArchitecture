@@ -22,8 +22,20 @@ toDoApp.controller('ToDoListsController', function ($scope, $http, Users, $route
         Users.GetUser(userId)
             .then(
                 function (data) {
-                    console.log(data)
                     $scope.user = data;
+                }
+            );
+    }
+});
+
+toDoApp.controller('ToDoListDetailsController', function ($scope, $http, Lists, $routeParams, $location) {
+    var listId = $routeParams.listId;
+    init();
+    function init() {
+        Lists.GetList(listId)
+            .then(
+                function (data) {
+                    $scope.list = data;
                 }
             );
     }

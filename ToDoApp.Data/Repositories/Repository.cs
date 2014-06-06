@@ -17,7 +17,7 @@ namespace ToDoApp.Data.Repositories
             }
         }
 
-        public IList<T> GetList()
+        public IEnumerable<T> GetList()
         {
             using (var conn = DbUtilities.GetProfiledConnection(DbUtilities.ConnectionString()))
             {

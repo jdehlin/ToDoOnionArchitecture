@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace ToDoApp.Website.Controllers
 {
@@ -12,7 +6,6 @@ namespace ToDoApp.Website.Controllers
     {
         //
         // GET: /UsersList/
-
         public ActionResult UsersList()
         {
             return View();
@@ -20,8 +13,14 @@ namespace ToDoApp.Website.Controllers
 
         //
         // GET: /ToDoLists/
-
         public ActionResult ToDoLists()
+        {
+            return View();
+        }
+
+        //
+        // GET: /ToDoList/
+        public ActionResult ToDoList()
         {
             return View();
         }
