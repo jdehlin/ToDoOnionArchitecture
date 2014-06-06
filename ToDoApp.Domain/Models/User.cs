@@ -2,7 +2,7 @@
 
 namespace ToDoApp.Domain.Models
 {
-    public sealed class User : BaseModel
+    public sealed class User : DataTransfer.User
     {
         public User(int id, string name)
         {
@@ -10,9 +10,7 @@ namespace ToDoApp.Domain.Models
             Name = name;
         }
         
-
-        public string Name { get; private set; }
-
+        
         public List<ToDoList> ToDoLists { get; set; }
 
         public override bool IsValid

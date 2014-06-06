@@ -20,6 +20,7 @@ namespace ToDoApp.Website
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            AutoMapperConfig.CreateMappings();
 
             ObjectFactory.Initialize(i => i.AddRegistry<ResolutionConfiguration>());
             ControllerBuilder.Current.SetControllerFactory(new StructureMapControllerFactory());

@@ -2,7 +2,7 @@
 
 namespace ToDoApp.Domain.Models
 {
-    public sealed class ToDoItem : BaseModel
+    public sealed class ToDoItem : DataTransfer.ToDoItem
     {
         public enum ToDoItemStatus
         {
@@ -16,18 +16,12 @@ namespace ToDoApp.Domain.Models
             UserId = userId;
             Body = body;
 
+            Status = ToDoItemStatus.InProgress;
+
             CreatedAt = DateTime.Now;
         }
 
-
-        public int UserId { get; private set; }
-
-        public string Body { get; private set; }
-
-        public ToDoItemStatus Status { get; set; }
         
-        public DateTime? UpdatedAt { get; set; }
-
         public override bool IsValid
         {
             get

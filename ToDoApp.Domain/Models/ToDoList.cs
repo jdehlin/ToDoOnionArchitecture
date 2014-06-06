@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ToDoApp.Domain.Models
 {
-    public sealed class ToDoList : BaseModel
+    public sealed class ToDoList : DataTransfer.ToDoList
     {
         public ToDoList(int id, int userId, string title)
         {
@@ -14,10 +14,6 @@ namespace ToDoApp.Domain.Models
             CreatedAt = DateTime.Now;
         }
 
-
-        public int UserId { get; private set; }
-
-        public string Title { get; private set; }
         
         public List<ToDoItem> ToDoItems { get; set; }
 

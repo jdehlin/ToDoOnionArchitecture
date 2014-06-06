@@ -4,8 +4,8 @@
 // The following connection settings were used to generate this file
 // 
 //     Connection String Name: `ConnectionString`
-//     Provider:               `System.Data.SqlServerCe.4.0`
-//     Connection String:      `Data Source=~\..\ToDoApp.Website\App_Data\ToDoDatabase.sdf`
+//     Provider:               `System.Data.SqlClient`
+//     Connection String:      `MultipleActiveResultSets=True;Data Source=.\sqlexpress;Initial Catalog=ToDoApp;Integrated Security=True`
 //     Include Views:          `True`
 
 using System;
@@ -18,27 +18,27 @@ namespace ToDoApp.Domain.DataTransfer
     /// A class which represents the ToDoItems table.
     /// </summary>
 	[Table("ToDoItems")]
-	public partial class ToDoItem
+	public class ToDoItem : Models.BaseModel
 	{
 		[Key]
 		public virtual int Id { get; set; }
-		public virtual string Body { get; set; }
-		public virtual int Status { get; set; }
 		public virtual int UserId { get; set; }
+		public virtual string Body { get; set; }
+		public virtual Models.ToDoItem.ToDoItemStatus Status { get; set; }
+		public virtual DateTime UpdatedAt { get; set; }
 		public virtual DateTime CreatedAt { get; set; }
-		public virtual DateTime? UpdatedAt { get; set; }
 	}
 
     /// <summary>
     /// A class which represents the ToDoLists table.
     /// </summary>
 	[Table("ToDoLists")]
-	public partial class ToDoList
+	public class ToDoList : Models.BaseModel
 	{
 		[Key]
 		public virtual int Id { get; set; }
-		public virtual string Title { get; set; }
 		public virtual int UserId { get; set; }
+		public virtual string Title { get; set; }
 		public virtual DateTime CreatedAt { get; set; }
 	}
 
@@ -46,7 +46,7 @@ namespace ToDoApp.Domain.DataTransfer
     /// A class which represents the Users table.
     /// </summary>
 	[Table("Users")]
-	public partial class User
+	public class User : Models.BaseModel
 	{
 		[Key]
 		public virtual int Id { get; set; }

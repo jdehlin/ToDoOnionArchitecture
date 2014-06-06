@@ -8,8 +8,14 @@ namespace ToDoApp.Domain.Models
 
         public virtual DateTime CreatedAt { get; set; }
 
-        public abstract bool IsValid { get; }
+        public virtual bool IsValid
+        {
+            get { return true; }
+        }
 
-        public abstract bool CanModify(User user);
+        public virtual bool CanModify(User user)
+        {
+            return true;
+        }
     }
 }

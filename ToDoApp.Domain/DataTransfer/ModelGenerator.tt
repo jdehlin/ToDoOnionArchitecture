@@ -30,16 +30,19 @@ It is based on the T4 template from the PetaPoco project which in turn is based 
  -----------------------------------------------------------------------------------------
 */
 	// Settings
-    ConnectionStringName = ""; // Uses last connection string in config if not specified
-	ConfigPath = @""; //Looks in current project for web.config or app.config by default. This overrides to a relative path - useful for seperate class library projects.
+    ConnectionStringName = "ConnectionString"; // Uses last connection string in config if not specified
+	ConfigPath = @"..\..\ToDoApp.Website\Web.config"; //Looks in current project for web.config or app.config by default. This overrides to a relative path - useful for seperate class library projects.
     Namespace = "ToDoApp.Domain.DataTransfer";
 	ClassPrefix = "";
 	ClassSuffix = "";
     IncludeViews = true;
-	ExcludeTablePrefixes = new string[]{"aspnet_","webpages_"};
+	ExcludeTablePrefixes = new string[]{"aspnet_","webpages_","sysdiagram", "usd_"};
 
     // Read schema
 	var tables = LoadTables();
+
+	// Overwites for integers that are enumerators in the code.
+	tables["ToDoItems"]["Status"].PropertyType="Models.ToDoItem.ToDoItemStatus";
 
 /*
 	// Tweak Schema
@@ -64,7 +67,7 @@ foreach(Table tbl in from t in tables where !t.Ignore select t){
     /// A class which represents the <#=tbl.Name#> <#=(tbl.IsView)?"view":"table"#>.
     /// </summary>
 	[Table("<#=tbl.Name#>")]
-	public partial class <#=tbl.ClassName#>
+	public class <#=tbl.ClassName#> : Models.BaseModel
 	{
 <#foreach(Column col in from c in tbl.Columns where !c.Ignore select c)
 {#>
