@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Dapper;
-using ToDoApp.Application.DataInterfaces;
-using ToDoApp.Domain.Models;
+﻿using ToDoApp.Application.DataInterfaces;
+using ToDoApp.Domain.DataTransfer;
 
 namespace ToDoApp.Data.Repositories
 {
@@ -29,7 +25,7 @@ namespace ToDoApp.Data.Repositories
         {
             if ((dependencies & UserDependencies.ToDoLists) == UserDependencies.ToDoLists)
             {
-                user.ToDoLists = _toDoListRepository.GetListForUser(user.Id);
+                user.ToDoLists = _toDoListRepository.GetListForUser(user.Id, ToDoListDependencies.None);
             }
         }
     }

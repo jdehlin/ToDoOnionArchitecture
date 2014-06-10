@@ -7,7 +7,7 @@ SET ANSI_PADDING ON
 GO
 CREATE TABLE [dbo].[ToDoItems](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
-	[UserId] [int] NOT NULL,
+	[ToDoListId] [int] NOT NULL,
 	[Body] [varchar](500) NOT NULL,
 	[Status] [int] NOT NULL,
 	[UpdatedAt] [datetime] NOT NULL,
@@ -62,3 +62,12 @@ CREATE TABLE [dbo].[Users](
 GO
 SET ANSI_PADDING OFF
 GO
+ALTER TABLE [dbo].[ToDoItems]  WITH CHECK ADD  CONSTRAINT [FK_ToDoItems_ToDoLists] FOREIGN KEY([ToDoListId])
+REFERENCES [dbo].[ToDoLists] ([Id])
+GO
+ALTER TABLE [dbo].[ToDoItems] CHECK CONSTRAINT [FK_ToDoItems_ToDoLists]
+GO
+ALTER TABLE [dbo].[ToDoLists]  WITH CHECK ADD  CONSTRAINT [FK_ToDoLists_Users] FOREIGN KEY([UserId])
+REFERENCES [dbo].[Users] ([Id])
+GO
+ALTER TABLE [dbo].[ToDoLists] CHECK CONSTRAINT [FK_ToDoLists_Users]

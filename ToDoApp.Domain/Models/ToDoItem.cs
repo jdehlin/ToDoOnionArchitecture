@@ -10,10 +10,10 @@ namespace ToDoApp.Domain.Models
             Completed = 2
         }
 
-        public ToDoItem(int id, int userId, string body)
+        public ToDoItem(int id, int toDoListId, string body)
         {
             Id = id;
-            UserId = userId;
+            ToDoListId = toDoListId;
             Body = body;
 
             Status = ToDoItemStatus.InProgress;
@@ -26,15 +26,25 @@ namespace ToDoApp.Domain.Models
         {
             get
             {
-                var userIdSet = UserId > 0;
+                var toDoListIdSet = ToDoListId > 0;
                 var validBody = Body.Length > 3 && Body.Length <= 100;
-                return userIdSet && validBody;
+                return toDoListIdSet && validBody;
             }
         }
 
         public override bool CanModify(User user)
         {
-            return IsValid && UserId == user.Id;
+            throw new NotImplementedException("Need the ToDoList as well.");
+        }
+
+        public bool CanModify(User user, ToDoList toDoList)
+        {
+            return IsValid && BelongsToList(toDoList) && toDoList.CanModify(user);
+        }
+
+        public bool BelongsToList(ToDoList toDoList)
+        {
+            return toDoList.Id == ToDoListId;
         }
     }
 }

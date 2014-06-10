@@ -11,6 +11,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Collections.Generic;
 
 namespace ToDoApp.Domain.DataTransfer
 {
@@ -18,40 +19,44 @@ namespace ToDoApp.Domain.DataTransfer
     /// A class which represents the ToDoItems table.
     /// </summary>
 	[Table("ToDoItems")]
-	public class ToDoItem : BaseModel
+	public partial class ToDoItem : BaseModel
 	{
 		[Key]
 		public virtual int Id { get; set; }
-		public virtual int UserId { get; set; }
+		public virtual int ToDoListId { get; set; }
 		public virtual string Body { get; set; }
 		public virtual Models.ToDoItem.ToDoItemStatus Status { get; set; }
 		public virtual DateTime UpdatedAt { get; set; }
 		public virtual DateTime CreatedAt { get; set; }
+		public virtual ToDoList ToDoList { get; set; }
 	}
 
     /// <summary>
     /// A class which represents the ToDoLists table.
     /// </summary>
 	[Table("ToDoLists")]
-	public class ToDoList : BaseModel
+	public partial class ToDoList : BaseModel
 	{
 		[Key]
 		public virtual int Id { get; set; }
 		public virtual int UserId { get; set; }
 		public virtual string Title { get; set; }
 		public virtual DateTime CreatedAt { get; set; }
+		public virtual User User { get; set; }
+		public virtual IEnumerable<ToDoItem> ToDoItems { get; set; }
 	}
 
     /// <summary>
     /// A class which represents the Users table.
     /// </summary>
 	[Table("Users")]
-	public class User : BaseModel
+	public partial class User : BaseModel
 	{
 		[Key]
 		public virtual int Id { get; set; }
 		public virtual string Name { get; set; }
 		public virtual DateTime CreatedAt { get; set; }
+		public virtual IEnumerable<ToDoList> ToDoLists { get; set; }
 	}
 
 }

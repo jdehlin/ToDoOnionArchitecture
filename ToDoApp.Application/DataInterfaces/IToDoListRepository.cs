@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
-using ToDoApp.Domain.Models;
+using ToDoApp.Domain.DataTransfer;
 
 namespace ToDoApp.Application.DataInterfaces
 {
     public interface IToDoListRepository : IRepository<ToDoList>
     {
-        List<ToDoList> GetListForUser(int userId);
+        ToDoList Get(int id, ToDoListDependencies dependencies);
+        List<ToDoList> GetListForUser(int userId, ToDoListDependencies dependencies);
     }
 }

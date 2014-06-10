@@ -52,10 +52,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseModel.cs" />
-    <Compile Include="DataTransfer\ModelGenerator.cs">
-      <DependentUpon>ModelGenerator.tt</DependentUpon>
+    <Compile Include="DataTransfer\Dependencies.cs" />
+    <Compile Include="DataTransfer\ModelGenerator1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <DependentUpon>ModelGenerator.tt</DependentUpon>
     </Compile>
     <Compile Include="Mappings.cs" />
     <Compile Include="Models\ToDoItem.cs" />
@@ -66,6 +67,7 @@
   <ItemGroup>
     <None Include="DataTransfer\ModelGenerator.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModelGenerator1.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>

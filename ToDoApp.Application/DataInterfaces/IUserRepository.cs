@@ -1,4 +1,4 @@
-﻿using ToDoApp.Domain.Models;
+﻿using ToDoApp.Domain.DataTransfer;
 
 namespace ToDoApp.Application.DataInterfaces
 {

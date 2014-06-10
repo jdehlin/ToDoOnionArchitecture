@@ -7,9 +7,12 @@ namespace ToDoApp.Domain
     {
         public static void Initialize()
         {
-            // define mappings
             Mapper.CreateMap<DataTransfer.User, User>();
             Mapper.CreateMap<User, DataTransfer.User>();
+            Mapper.CreateMap<DataTransfer.ToDoList, ToDoList>();
+            Mapper.CreateMap<ToDoList, DataTransfer.ToDoList>();
+            Mapper.CreateMap<DataTransfer.ToDoItem, ToDoItem>();
+            Mapper.CreateMap<ToDoItem, DataTransfer.ToDoItem>();
         } 
     }
 }

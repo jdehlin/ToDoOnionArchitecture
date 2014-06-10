@@ -5,6 +5,7 @@ namespace ToDoApp.Application.Services
 {
     public interface IToDoListService
     {
-        ToDoList Get(int listId);
+        ToDoList Get(int toDoListId);
+        ToDoList GetWithItems(int toDoListId);
     }
 }
