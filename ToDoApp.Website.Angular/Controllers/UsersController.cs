@@ -7,9 +7,9 @@ namespace ToDoApp.Website.Controllers
 {
     public class UsersController : ApiController
     {
-        private readonly IUserService _userService;
+        private readonly UserService _userService;
 
-        public UsersController(IUserService userService)
+        public UsersController(UserService userService)
         {
             _userService = userService;
         }

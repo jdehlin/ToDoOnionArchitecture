@@ -69,12 +69,8 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Services\Implementations\ToDoItemService.cs" />
-    <Compile Include="Services\Implementations\ToDoListService.cs" />
-    <Compile Include="Services\Implementations\UserService.cs" />
-    <Compile Include="Services\IToDoItemService.cs" />
-    <Compile Include="Services\IToDoListService.cs" />
-    <Compile Include="Services\IUserService.cs" />
+    <Compile Include="Services\ToDoListService.cs" />
+    <Compile Include="Services\UserService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

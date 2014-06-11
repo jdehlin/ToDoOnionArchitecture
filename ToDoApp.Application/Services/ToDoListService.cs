@@ -3,9 +3,9 @@ using ToDoApp.Application.DataInterfaces;
 using ToDoApp.Domain.DataTransfer;
 using ToDoList = ToDoApp.Domain.Models.ToDoList;
 
-namespace ToDoApp.Application.Services.Implementations
+namespace ToDoApp.Application.Services
 {
-    public class ToDoListService : IToDoListService
+    public class ToDoListService
     {
         private readonly IToDoListRepository _toDoListRepository;
 

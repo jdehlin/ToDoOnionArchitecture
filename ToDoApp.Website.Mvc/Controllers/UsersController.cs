@@ -12,9 +12,9 @@ namespace ToDoApp.Website.Mvc.Controllers
 {
     public class UsersController : Controller
     {
-        private readonly IUserService _userService;
+        private readonly UserService _userService;
 
-        public UsersController(IUserService userService)
+        public UsersController(UserService userService)
         {
             _userService = userService;
         }

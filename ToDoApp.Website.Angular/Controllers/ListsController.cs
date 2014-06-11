@@ -6,9 +6,9 @@ namespace ToDoApp.Website.Controllers
 {
     public class ListsController : ApiController
     {
-        private readonly IToDoListService _toDoListService;
+        private readonly ToDoListService _toDoListService;
 
-        public ListsController(IToDoListService toDoListService)
+        public ListsController(ToDoListService toDoListService)
         {
             _toDoListService = toDoListService;
         }

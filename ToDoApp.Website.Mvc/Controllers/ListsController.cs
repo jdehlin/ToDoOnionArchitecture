@@ -12,9 +12,9 @@ namespace ToDoApp.Website.Mvc.Controllers
 {
     public class ListsController : Controller
     {
-        private readonly IToDoListService _toDoListService;
+        private readonly ToDoListService _toDoListService;
 
-        public ListsController(IToDoListService tsDoListService)
+        public ListsController(ToDoListService tsDoListService)
         {
             _toDoListService = tsDoListService; 
         }

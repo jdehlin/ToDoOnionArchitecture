@@ -4,9 +4,9 @@ using ToDoApp.Application.DataInterfaces;
 using ToDoApp.Domain.DataTransfer;
 using User = ToDoApp.Domain.Models.User;
 
-namespace ToDoApp.Application.Services.Implementations
+namespace ToDoApp.Application.Services
 {
-    public class UserService : IUserService
+    public class UserService
     {
         private readonly IUserRepository _userRepository;
 
