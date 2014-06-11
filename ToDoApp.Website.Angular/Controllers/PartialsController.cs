@@ -12,6 +12,13 @@ namespace ToDoApp.Website.Controllers
         }
 
         //
+        // GET: /UserCreate/
+        public ActionResult UserCreate()
+        {
+            return View();
+        }
+
+        //
         // GET: /ToDoLists/
         public ActionResult ToDoLists()
         {

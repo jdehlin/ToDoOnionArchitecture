@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30324.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoApp.Website", "ToDoApp.Website\ToDoApp.Website.csproj", "{10700096-04A4-4CC7-8FE5-7D02CDA53BF0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoApp.Website.Angular", "ToDoApp.Website.Angular\ToDoApp.Website.Angular.csproj", "{10700096-04A4-4CC7-8FE5-7D02CDA53BF0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoApp.Domain", "ToDoApp.Domain\ToDoApp.Domain.csproj", "{27B3AF08-A221-4A3A-A7DA-2302F75BA7BE}"
 EndProject
@@ -23,6 +23,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{F0FF5B
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database.ToDoApp", "Database.ToDoApp\Database.ToDoApp.csproj", "{66EC4EE8-F4BD-4D27-8515-0908AAD5F5BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoApp.Website.Mvc", "ToDoApp.Website.Mvc\ToDoApp.Website.Mvc.csproj", "{6ACF90DF-7581-4C92-9647-3F6543BE4C5C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -58,6 +60,10 @@ Global
 		{66EC4EE8-F4BD-4D27-8515-0908AAD5F5BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66EC4EE8-F4BD-4D27-8515-0908AAD5F5BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66EC4EE8-F4BD-4D27-8515-0908AAD5F5BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6ACF90DF-7581-4C92-9647-3F6543BE4C5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6ACF90DF-7581-4C92-9647-3F6543BE4C5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6ACF90DF-7581-4C92-9647-3F6543BE4C5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6ACF90DF-7581-4C92-9647-3F6543BE4C5C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -492,8 +492,6 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\knockout-2.2.0.debug.js" />
-    <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\Site\app.js" />
     <Content Include="Scripts\Site\controllers.js" />
@@ -516,6 +514,7 @@
     <Content Include="Views\Partials\UsersList.cshtml" />
     <Content Include="Views\Partials\ToDoLists.cshtml" />
     <Content Include="Views\Partials\ToDoList.cshtml" />
+    <Content Include="Views\Partials\UserCreate.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

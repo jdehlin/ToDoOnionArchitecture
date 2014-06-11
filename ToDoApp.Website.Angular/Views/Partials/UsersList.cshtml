@@ -1,0 +1,11 @@
+﻿<h3>
+    Users <a href="#/users/create">(+)</a>
+</h3>
+<div>
+    <ul class="users">
+        <li ng-repeat="user in users"
+            class="thumbnail user-listing">
+            <a href="#/users/{{user.id}}">{{user.name}}</a>
+        </li>
+    </ul>
+</div>

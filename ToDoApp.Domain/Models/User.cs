@@ -3,8 +3,10 @@ using System.Collections.Generic;
 
 namespace ToDoApp.Domain.Models
 {
-    public sealed class User : DataTransfer.User
+    public class User : DataTransfer.User
     {
+        public User() { }
+
         public User(int id, string name)
         {
             Id = id;
@@ -12,11 +14,9 @@ namespace ToDoApp.Domain.Models
         }
         
         
-        public List<ToDoList> ToDoLists { get; set; }
-
         public override bool IsValid
         {
-            get { return true; }
+            get { return !string.IsNullOrWhiteSpace(Name) && Name.Length > 3 && Name.Length < 50; }
         }
 
         public override bool CanModify(User user)
