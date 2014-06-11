@@ -14,8 +14,6 @@ namespace ToDoApp.Domain.Models
             CreatedAt = DateTime.Now;
         }
 
-        
-        public List<ToDoItem> ToDoItems { get; set; }
 
         public override bool IsValid
         {

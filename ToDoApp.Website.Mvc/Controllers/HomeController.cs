@@ -22,7 +22,7 @@ namespace ToDoApp.Website.Mvc.Controllers
 
         public ActionResult Index()
         {
-            var result = _userService.GetAll();
+            var result = _userService.List();
             var mappedResult = Mapper.Map<List<User>, List<ViewUser>>(result);
             return View(mappedResult);
         }

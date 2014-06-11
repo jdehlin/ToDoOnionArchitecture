@@ -26,6 +26,7 @@
             @Html.DisplayFor(model => model.CreatedAt)
         </dd>
     </dl>
+    @Html.Partial("_Items", Model.ToDoItems)
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |

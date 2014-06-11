@@ -29,7 +29,7 @@ namespace ToDoApp.Website.Mvc.Controllers
         // GET: /Users/Details/5
         public ActionResult Details(int id)
         {
-            var result = _userService.GetWithLists(id);
+            var result = _userService.Details(id);
             var mappedResult = Mapper.Map<User, ViewUser>(result);
             return View(mappedResult);
         }

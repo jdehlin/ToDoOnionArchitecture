@@ -12,8 +12,10 @@ namespace ToDoApp.Website.Mvc
 
             Mapper.CreateMap<User, ViewUser>();
             Mapper.CreateMap<ViewUser, User>();
-            Mapper.CreateMap<ViewToDoList, ToDoList>();
             Mapper.CreateMap<ToDoList, ViewToDoList>();
+            Mapper.CreateMap<ViewToDoList, ToDoList>();
+            Mapper.CreateMap<ToDoItem, ViewToDoItem>();
+            Mapper.CreateMap<ViewToDoItem, ToDoItem>();
         }
     }
 }

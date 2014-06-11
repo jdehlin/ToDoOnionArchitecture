@@ -20,7 +20,7 @@ namespace ToDoApp.Website.Controllers
         /// </summary>
         public List<User> Get()
         {
-            return _userService.GetAll();
+            return _userService.List();
         }
 
         /// <summary>
@@ -28,7 +28,7 @@ namespace ToDoApp.Website.Controllers
         /// </summary>
         public User Get(int id)
         {
-            return _userService.GetWithLists(id);
+            return _userService.Details(id);
         }
     }
 }

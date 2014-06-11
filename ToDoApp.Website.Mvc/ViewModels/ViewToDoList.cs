@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
+using ToDoApp.Domain.Models;
 
 namespace ToDoApp.Website.Mvc.ViewModels
 {
@@ -12,6 +14,8 @@ namespace ToDoApp.Website.Mvc.ViewModels
         public virtual string Title { get; set; }
 
         [DisplayName("Created")]
-        public virtual DateTime CreatedAt { get; set; } 
+        public virtual DateTime CreatedAt { get; set; }
+
+        public List<ViewToDoItem> ToDoItems { get; set; }
     }
 }

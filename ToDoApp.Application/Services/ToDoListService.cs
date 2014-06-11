@@ -8,23 +8,19 @@ namespace ToDoApp.Application.Services
     public class ToDoListService
     {
         private readonly IToDoListRepository _toDoListRepository;
+        private readonly IUserRepository _userRepository;
 
-        public ToDoListService(IToDoListRepository toDoListRepository)
+        public ToDoListService(IToDoListRepository toDoListRepository, IUserRepository userRepository)
         {
             _toDoListRepository = toDoListRepository;
+            _userRepository = userRepository;
         }
 
-
-        public ToDoList Get(int toDoListId)
-        {
-            var result = _toDoListRepository.Get(toDoListId);
-            var mappedResult = Mapper.Map<Domain.DataTransfer.ToDoList, ToDoList>(result);
-            return mappedResult;
-        }
-
-        public ToDoList GetWithItems(int toDoListId)
+        
+        public ToDoList Details(int toDoListId)
         {
             var result = _toDoListRepository.Get(toDoListId, ToDoListDependencies.ToDoItems);
+            var user = _userRepository.Get(result.UserId);
             var mappedResult = Mapper.Map<Domain.DataTransfer.ToDoList, ToDoList>(result);
             return mappedResult;
         }

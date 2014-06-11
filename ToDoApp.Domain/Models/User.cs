@@ -12,8 +12,8 @@ namespace ToDoApp.Domain.Models
             Id = id;
             Name = name;
         }
-        
-        
+
+
         public override bool IsValid
         {
             get { return !string.IsNullOrWhiteSpace(Name) && Name.Length > 3 && Name.Length < 50; }

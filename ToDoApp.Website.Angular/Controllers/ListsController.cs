@@ -19,7 +19,7 @@ namespace ToDoApp.Website.Controllers
         /// </summary>
         public ToDoList Get(int id)
         {
-            return _toDoListService.GetWithItems(id);
+            return _toDoListService.Details(id);
         }
     }
 }

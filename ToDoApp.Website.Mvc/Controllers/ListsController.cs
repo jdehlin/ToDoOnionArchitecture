@@ -16,14 +16,14 @@ namespace ToDoApp.Website.Mvc.Controllers
 
         public ListsController(ToDoListService tsDoListService)
         {
-            _toDoListService = tsDoListService; 
+            _toDoListService = tsDoListService;
         }
 
 
         // GET: /Lists/Details/5
         public ActionResult Details(int id)
         {
-            var result = _toDoListService.GetWithItems(id);
+            var result = _toDoListService.Details(id);
             var mappedResult = Mapper.Map<ToDoList, ViewToDoList>(result);
             return View(mappedResult);
         }
