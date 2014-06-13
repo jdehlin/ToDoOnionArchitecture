@@ -36,7 +36,7 @@ It is based on the T4 template from the PetaPoco project which in turn is based 
 	ClassPrefix = "";
 	ClassSuffix = "";
     IncludeViews = true;
-    IncludeRelationships = true;
+    IncludeRelationships = false;
 	ExcludeTablePrefixes = new string[]{"aspnet_","webpages_","sysdiagram", "usd_"};
 
     // Read schema

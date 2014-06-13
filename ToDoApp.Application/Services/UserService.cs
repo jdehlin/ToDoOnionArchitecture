@@ -23,8 +23,6 @@ namespace ToDoApp.Application.Services
 
         public User Details(int userId)
         {
-            var temp = new User(1, "test");
-
             var result = _userRepository.Get(userId, UserDependencies.ToDoLists);
             return result;
         }

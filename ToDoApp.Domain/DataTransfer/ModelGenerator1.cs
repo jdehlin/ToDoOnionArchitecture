@@ -28,7 +28,6 @@ namespace ToDoApp.Domain.DataTransfer
 		public virtual Models.ToDoItem.ToDoItemStatus Status { get; set; }
 		public virtual DateTime UpdatedAt { get; set; }
 		public virtual DateTime CreatedAt { get; set; }
-		public virtual ToDoList ToDoList { get; set; }
 	}
 
     /// <summary>
@@ -42,8 +41,6 @@ namespace ToDoApp.Domain.DataTransfer
 		public virtual int UserId { get; set; }
 		public virtual string Title { get; set; }
 		public virtual DateTime CreatedAt { get; set; }
-		public virtual User User { get; set; }
-		public virtual IEnumerable<ToDoItem> ToDoItems { get; set; }
 	}
 
     /// <summary>
@@ -56,7 +53,6 @@ namespace ToDoApp.Domain.DataTransfer
 		public virtual int Id { get; set; }
 		public virtual string Name { get; set; }
 		public virtual DateTime CreatedAt { get; set; }
-		public virtual IEnumerable<ToDoList> ToDoLists { get; set; }
 	}
 
 }

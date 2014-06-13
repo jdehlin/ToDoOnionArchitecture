@@ -27,6 +27,7 @@ namespace ToDoApp.Domain.Models
         public string Title { get; set; }
         public DateTime CreatedAt { get; set; }
         public IEnumerable<ToDoItem> ToDoItems { get; set; }
+        public User Owner { get; set; }
 
 
         public override bool IsValid

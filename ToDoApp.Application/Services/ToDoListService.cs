@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using ToDoApp.Application.DataInterfaces;
-using ToDoApp.Domain.DataTransfer;
-using ToDoList = ToDoApp.Domain.Models.ToDoList;
+using ToDoApp.Domain.Models;
 
 namespace ToDoApp.Application.Services
 {
@@ -20,9 +19,8 @@ namespace ToDoApp.Application.Services
         public ToDoList Details(int toDoListId)
         {
             var result = _toDoListRepository.Get(toDoListId, ToDoListDependencies.ToDoItems);
-            var user = _userRepository.Get(result.UserId);
-            var mappedResult = Mapper.Map<Domain.DataTransfer.ToDoList, ToDoList>(result);
-            return mappedResult;
+            result.Owner = _userRepository.Get(result.UserId);
+            return result;
         }
     }
 }

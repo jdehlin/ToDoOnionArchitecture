@@ -52,7 +52,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseModel.cs" />
-    <Compile Include="DataTransfer\Dependencies.cs" />
     <Compile Include="DataTransfer\ModelGenerator1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
