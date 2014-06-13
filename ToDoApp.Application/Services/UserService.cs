@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
 using AutoMapper;
 using ToDoApp.Application.DataInterfaces;
-using ToDoApp.Domain.DataTransfer;
-using User = ToDoApp.Domain.Models.User;
+using ToDoApp.Domain.Models;
 
 namespace ToDoApp.Application.Services
 {
@@ -19,15 +18,15 @@ namespace ToDoApp.Application.Services
         public List<User> List()
         {
             var result = _userRepository.GetList();
-            var mappedResult = Mapper.Map<List<Domain.DataTransfer.User>, List<User>>(result);
-            return mappedResult;
+            return result;
         }
 
         public User Details(int userId)
         {
+            var temp = new User(1, "test");
+
             var result = _userRepository.Get(userId, UserDependencies.ToDoLists);
-            var mappedResult = Mapper.Map<Domain.DataTransfer.User, User>(result);
-            return mappedResult;
+            return result;
         }
     }
 }

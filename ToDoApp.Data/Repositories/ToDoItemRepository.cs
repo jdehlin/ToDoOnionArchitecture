@@ -2,7 +2,7 @@
 using System.Linq;
 using Dapper;
 using ToDoApp.Application.DataInterfaces;
-using ToDoApp.Domain.DataTransfer;
+using ToDoApp.Domain.Models;
 
 namespace ToDoApp.Data.Repositories
 {

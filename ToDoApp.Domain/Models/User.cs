@@ -3,15 +3,26 @@ using System.Collections.Generic;
 
 namespace ToDoApp.Domain.Models
 {
-    public class User : DataTransfer.User
+    [Flags]
+    public enum UserDependencies
     {
-        public User() { }
+        None = -1,
+        ToDoLists = 1
+    }
 
+    public class User : BaseModel
+    {
         public User(int id, string name)
         {
             Id = id;
             Name = name;
         }
+
+
+        public int Id { get; private set; }
+        public string Name { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public IEnumerable<ToDoList> ToDoLists { get; set; }
 
 
         public override bool IsValid

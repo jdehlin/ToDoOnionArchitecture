@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using ToDoApp.Domain.DataTransfer;
+using ToDoApp.Domain.Models;
 using ToDoApp.Website.Mvc.ViewModels;
 
 namespace ToDoApp.Website.Mvc

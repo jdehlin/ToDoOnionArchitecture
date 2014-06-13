@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using AutoMapper;
 using ToDoApp.Application.Services;
-using ToDoApp.Domain.DataTransfer;
+using ToDoApp.Domain.Models;
 using ToDoApp.Website.Mvc.ViewModels;
 
 namespace ToDoApp.Website.Mvc.Controllers
